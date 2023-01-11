@@ -1,0 +1,31 @@
+img {
+    width: 400px;
+    height: 300px;
+    margin: 0 auto;
+    display: block;
+  }
+  
+ul {
+    border: 1px solid black;
+    width: 300px; 
+    margin: 0 auto;
+}
+h2 {
+    color: green;
+   
+}
+
+#SS {
+    color: rgb(206, 187, 47);
+}
+#HS {
+    color: red;
+}
+header {
+
+margin-left: 700px;
+}
+body {
+
+background-color: beige;
+}
