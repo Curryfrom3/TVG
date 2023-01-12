@@ -30,6 +30,53 @@ document.write("Name: " + name + "<br>");
 // document.write("Age: " + age + "<br>"); 
 document.write("City: " + city + "<br>");
 
+let input = null;
+
+// function to validate user input
+function validateInput(input) {
+  if (input >= 1 && input <= 5) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+// function to prompt user for input
+function getUserInput() {
+  input = prompt("What star rating would you give, 1-5?");
+  if (validateInput(input)) {
+    return input;
+  } else {
+    alert("Invalid input, please enter a number between 1 and 5.");
+    return getUserInput();
+  }
+}
+
+// function to show image
+function showImage(input) {
+    let container = document.createElement("div");
+    container.style.display = "flex";
+    container.style.flexWrap = "wrap";
+    for (let i = 0; i < input; i++) {
+    let img = document.createElement("img");
+    img.src = "HS.jpeg";
+    let counter = document.createElement("p");
+    counter.innerText = `Image ${i+1}`;
+    let imgContainer = document.createElement("div");
+    imgContainer.appendChild(img);
+    imgContainer.appendChild(counter);
+    container.appendChild(imgContainer);
+    }
+    document.body.appendChild(container);
+  }
+
+// get user input
+input = getUserInput();
+
+// show image
+showImage(input);
+
+
       </script>
   
         <h2>Small Spider</h2>
